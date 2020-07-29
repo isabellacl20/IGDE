@@ -1,0 +1,109 @@
+.menu{
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    height: 50px;
+    position: sticky;
+    top: 1px;
+    justify-content: center;
+}
+
+.logo{
+    background-image: url(../images/iqlogo.jpg);
+    background-position: center;
+    background-size: cover;
+    border-right: 5px solid rgba(66, 63, 63, 0.644);
+    border-left: 5px solid rgba(66, 63, 63, 0.644);
+    flex-grow: 1;
+    
+}
+nav{
+    flex-grow: 3;
+
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+   
+
+}
+
+nav ul li{
+    list-style: none;
+     margin-top: 1px; 
+     
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 20px;
+    
+}
+nav ul li a:hover{
+    background-color:#4a95b888;
+    border-bottom: 3px solid #4a95b893;
+    margin-top: 10px;
+    
+}
+
+.contenedor1{
+    margin: 5px 5px;
+    display: flex;
+    height: 650px;
+    overflow: hidden;/*se oculte lo que sobresalga al lado derecho de la pagina*/
+    width: 80%; /*ancho*/
+    background-size: cover;
+    background-position: center;
+    animation: cambioimagen 15s infinite;
+}
+
+
+
+.contenedor1 .derecho{
+    width: 20%;
+    background-color: yellow;
+    position: relative;
+}
+
+.contenedor1 .derecho::before{
+    content:"";
+   position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: -40px;
+    transform-origin: bottom ;
+    transform: skewX(25deg);
+    background: inherit;
+    border-left: 50px double aqua;
+    
+}
+
+@keyframes cambioimagen{
+    0%{
+        background-image: url(../images/img8.jpg);
+    }
+    35%{
+        background-image: url(../images/img8.jpg);
+    }
+    40%{
+        background-image: url(../images/img7.jpg); 
+    }
+    75%{
+        background-image: url(../images/img7.jpg); 
+    }
+    80%{
+        background-image: url(../images/img3.jpg); 
+    }
+    95%{
+        background-image: url(../images/img3.jpg);
+    }
+    100%{
+        background-image: url(../images/img8.jpg);  
+    }
+
+
+
+}

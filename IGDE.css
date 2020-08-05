@@ -91,6 +91,7 @@ header{
 .contenedor1{
     height: auto;
     position: relative; 
+   
 }
 .contenedor1 video{
     width: 100%;
@@ -106,15 +107,16 @@ header{
     color: rgb(0, 0, 0);
     text-align: center;
     justify-content: center;
+
 }
 .contenidomision{
     top: 220px;
-    left: 200px;
+    left: 20%;
     
 }
 .contenidovision{
     top: 220px;
-    left: 710px;
+    left: 50%;
 }
 .contenidomision h2, .contenidovision h2{
     margin-top: 53px;

@@ -1,19 +1,21 @@
+*{
+    margin: 0px;
+}
+
 .menu{
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     height: 50px;
     position: sticky; 
     z-index: 1000;
-    top: 1px;
+    top: 0px;
     justify-content: center;
 }
-.logo{
-    background-image: url(../images/iqlogo.jpg);
-    background-position: center;
-    background-size: cover;
+.logo img{
     border-right: 5px solid rgba(66, 63, 63, 0.644);
     border-left: 5px solid rgba(66, 63, 63, 0.644);
-    flex-grow: 1;
+    height: 50px;
+    width: 200px;
 }
 nav{
     flex-grow: 3;
@@ -24,7 +26,7 @@ nav ul{
 }
 nav ul li{
     list-style: none;
-    margin-top: 0px; 
+    margin-top: 15px; 
 }
 nav ul li a{
     text-decoration: none;
@@ -33,65 +35,53 @@ nav ul li a{
     padding: 15px 20px;
 }
 nav ul li a:hover{
-    background-color:#4a95b888;
-    border-bottom: 4px solid #4a95b893;
+    background-color:#2695c988;
+    border-bottom: 4px solid #00aeff93;
     margin-top: 10px;
 }
 header{
     display: flex;
-    height: 600px;
+    height: 850px;
     background-size: cover;
     background-position: center;
     justify-content: center;
     align-items: center;
-    animation: cambioimagen 15s infinite;
+    background-image: url(../IGDE/imagenesigde/maxresdefault.jpg);
+    background-color: rgba(0, 0, 0, 0.322);
+    background-blend-mode: soft-light;
+}
 
-}
-@keyframes cambioimagen{
-    0%{
-        background-image: url(../IGDE/imagenesigde/data-1590455_1920.jpg)
-    }
-    35%{
-        background-image: url(../IGDE/imagenesigde/business-businessmen-classroom-communication-267507.jpg);
-    }
-    40%{
-        background-image: url(../IGDE/imagenesigde/security-265130_1920.jpg); 
-    }
-    75%{
-        background-image: url(../IGDE/imagenesigde/technology-792180_1920.jpg); 
-    }
-    80%{
-        background-image: url(../IGDE/imagenesigde/earth-2254769_1920.jpg); 
-    }
-    100%{
-        background-image: url(../IGDE/imagenesigde/office-1209640_1920.jpg);
-    }
-    
-}
 .cuadrotexto{
-    width: 50%;
+    width: 37%;
     height: 45%;
-    background-color: rgba(255, 255, 255, 0.534);
     padding: 80px 60px;
     text-align: center;  
+    padding-right: 950px;
  }
  header h1{
-     margin-top: 5px;
-     font-size: 80px;
-     font-family: Georgia, 'Times New Roman', Times, serif;
- }
- header h2{
-    font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
- }
+     margin-top: 15px;
+     font-size: 50px;
+     font-family: Arial, Helvetica, sans-serif;
+     color: white;
+     border: 3px solid white;
+
+     
+    }
  header p{
      font-size: 20px;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: Arial, Helvetica, sans-serif;
+     color: white;
+     margin-top: 40px;
  }
+
+ header img{
+    
+     margin-top: -650px;
+     margin-left: 670px;
+}
 .contenedor1{
     height: auto;
     position: relative; 
-   
 }
 .contenedor1 video{
     width: 100%;
@@ -99,31 +89,33 @@ header{
 
 .contenedor1 div{
     position: absolute;
-    background-color: rgba(38, 173, 236, 0.548);
+    background-color: rgba(26, 146, 194, 0.856);
     padding: 20px;
     border-radius: 20px;
     width: 400px;
     height: 250px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     justify-content: center;
-
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.507);
 }
 .contenidomision{
-    top: 220px;
+    top: 350px;
     left: 20%;
+    
 }
 .contenidovision{
-    top: 220px;
-    left: 50%;
+    top: 350px;
+    left: 55%;
 }
 .contenidomision h2, .contenidovision h2{
     margin-top: 53px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .contenidovision p, .contenidomision p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    margin-top: 10px;
 }
 .contenedor2{
     position: relative;

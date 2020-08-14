@@ -1,15 +1,42 @@
+body{
+    background-color: rgba(231, 232, 245, 0.945);
+}
 form{
-   background-color: blueviolet;
+   background-color: rgb(255, 255, 255);
    width: 50%;
    align-self: center;
+   justify-content: center;
+   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.507);
+   margin-left: 20%;
+   margin-top: 5%;
+   font-family: Arial, Helvetica, sans-serif;
+   padding-left: 10%;
+   padding-top: 3%;
+   padding-bottom: 3%;
+   padding-right: 0px;
 }
 a{
-    background-color: rgb(248, 211, 211);
+    background-color: rgb(39, 39, 39);
     list-style: none;
     text-decoration: none;
-
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 45%;
+    margin-top: 200%;
 }
 
 a:hover{
-    background-color: cadetblue;
+    background-color: rgb(255, 255, 255);
+    color: rgb(39, 39, 39);
+}
+
+h1{
+    background-color: rgb(39, 39, 39);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 0px;
 }

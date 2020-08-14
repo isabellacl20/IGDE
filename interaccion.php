@@ -70,10 +70,30 @@
                 <input type="number" name="contacto">
             </label>
             <br><br>
-            
+            <label>
+                Contraseña
+                <input type="password" name="contraseña">
+            </label>
+            <br><br>
             
         
             <input name="Guardar" type="submit" value="Guardar">
+
+            <div class="contenedor_qr">
+                <img src="qr_generator.png" alt="qr-code" class="imagen">
+                <textarea readonly><?php
+                if(isset($_POST['Guardar'])){
+                    
+                    $documento = $_POST['documento'];
+                    
+                    echo "$documento";
+
+                }
+                ?></textarea>
+
+                <button>Generar codigo QR</button>
+            </div>
+
         </form>
 
 
@@ -93,6 +113,7 @@
         $cargo = $_POST['cargo'];
         $fechaingreso = $_POST['fechaingreso'];
         $contacto = $_POST['contacto'];
+        $contraseña = $_POST['contraseña'];
        //En la variable $datos se guarda la consulta de la tabla del estudainte 
       $datos = mysqli_query($conectar, "SELECT * FROM  $tablaempleados  WHERE documento = '$identificacion'" );
       //se crea un while que recorra es variable $datos y cada registro que encuntre lo guarda en $consulta
@@ -102,7 +123,7 @@
          $buscar++;
       }
       if($buscar>0){echo"Ya existe este documento";}
-      else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto')");echo"Su usuario ha sido creado con éxito";}
+      else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto','contraseña')");echo"Su usuario ha sido creado con éxito";}
 
         // include("desconectar.php");
         

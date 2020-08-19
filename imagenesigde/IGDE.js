@@ -6,7 +6,7 @@ boton.addEventListener("click", GenerarQR);
 
 function GenerarQR(){
     var size = "1000*1000";
-    var datos = texto.values;
+    var datos = texto.value;
     var baseURL = "http://api.qrserver.com/v1/create-qr-code/";
 
     var url = `${baseURL}?data=${datos}&size=${size}`;

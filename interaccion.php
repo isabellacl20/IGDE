@@ -80,20 +80,18 @@
             <input name="Guardar" type="submit" value="Guardar">
 
             <div class="contenedor_qr">
-                <img src="qr_generator.png" alt="qr-code" class="imagen">
-                <?php
+            <img src="imagenesigde/Logo igde.png" alt="qr-code" class="imagen">
+            <textarea><?php
                 if(isset($_POST['Guardar'])){
                     
                     $documento = $_POST['documento'];
                     
-                    echo "<textarea>$documento</textarea>";
-
-
+                    echo $documento;
                 }
                 ?></textarea>
 
                 <button>Generar codigo QR</button>
-                <a href="javascript:reload()"> <img src="actualizar.png"> </a>
+                
             </div>
             <script src="IGDE.js"> </script>
 

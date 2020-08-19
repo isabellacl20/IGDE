@@ -16,46 +16,46 @@
             <input type="text" name="nombreusuario" id="name" >
             <br><br>
             <label>
-                Ingrese sus apellidos
+                Apellidos
                 <input type="text" name="apellidos">
             </label>
             <br><br>
             <label>
-                Ingrese su tipo de sangre
+                Tipo de sangre
                 <input type="text" name="tiposangre">
             </label>
             <br><br>
             <label>
-                Ingrese su número de documento de identidad
+                Número de documento de identidad
                 <input type="number" name="documento">
             </label>     
                 <br>
                 <br>
             <label>
-                 Ingrese su número telefónico
+                 Número telefónico
                  <input type="number" name="telefono">
             </label>     
                 <br>
                 <br>
             <label>
-                Ingrese correo electrónico
+                Correo electrónico
                 <input type="email" name="correo" placeholder="ejemplo@ejemplo.com">
             </label>     
                 <br>
                 <br>
             <label>
-                Ingrese la empresa en la que trabaja
+                Empresa en la que trabaja
                 <input type="text" name="empresa">
              </label>
             <br><br>
             <label>
-                Ingrese su horario de trabajo
+               Horario de trabajo
                 <input type="number" name="horario">
            </label>     
                <br>
                <br>
             <label>
-                Ingrese el cargo que ocupa dentro de la empresa
+                Cargo que ocupa dentro de la empresa
                 <input type="text" name="cargo">
             </label>
             <br><br>
@@ -66,7 +66,7 @@
             
             <br><br>
             <label>
-                Ingrese un contacto de emergencia
+                Número telefónico de un contacto de emergencia
                 <input type="number" name="contacto">
             </label>
             <br><br>

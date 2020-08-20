@@ -2,13 +2,13 @@ body{
     background-image: url(./imagenesigde/maxresdefault.jpg);
 }
 form{
-   background-color: rgb(110, 110, 110);
+   background-color: rgb(97, 97, 97);
    width: 50%;
    align-self: center;
    justify-content: center;
    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.507);
    margin-left: 20%;
-   margin-top: 5%;
+   margin-top: 3%;
    font-family: Arial, Helvetica, sans-serif;
    padding-left: 10%;
    padding-top: 3%;
@@ -28,6 +28,7 @@ a{
     padding-right: 40px;
     margin-left: 45%;
     margin-top: 500px;
+    font-weight: bolder;
 }
 
 a:hover{
@@ -39,7 +40,6 @@ h1{
     background-color: rgb(39, 39, 39);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    padding-right: 0px;
 }
 .imagen{
     width: 300px;

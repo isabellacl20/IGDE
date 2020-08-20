@@ -80,7 +80,7 @@
             <input name="Guardar" type="submit" value="Guardar">
 
             <div class="contenedor_qr">
-            <img src="imagenesigde/Logo igde.png" alt="qr-code" class="imagen">
+            <img src="imagenesigde/Logo igde.png" alt="qr-code" class="imagen";>
             <textarea><?php
                 if(isset($_POST['Guardar'])){
                     
@@ -98,7 +98,7 @@
         </form>
 
 
-    <a href="IGDE.html">Volver</a>
+    <a href="IGDE.html">VOLVER</a>
     <?php
      if(isset($_POST['Guardar'])){
         include('conectar.php');

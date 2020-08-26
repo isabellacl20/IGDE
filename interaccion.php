@@ -127,10 +127,25 @@
       else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto','contraseña')");echo"Su usuario ha sido creado con éxito";}
 
         // include("desconectar.php");
-        
-    }
 
-    ?>
-    
+        ?>
+        
+        <div class="fondo">
+            <div class="contenedor_qr">
+                <img src="imagenesigde/Logo igde.png" alt="qr-cod" class="imagen">
+                <textarea readonly><?php echo "$identificacion"; ?> </textarea>
+
+                <button>Generar codigo QR</button>
+            </div>
+        </div>
+
+    <?php
+
+     }
+
+     ?>
+     
+     
+     <script src="IGDE.js"></script> 
 </body>
 </html>

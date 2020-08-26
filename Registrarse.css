@@ -1,5 +1,7 @@
 body{
     background-image: url(./imagenesigde/maxresdefault.jpg);
+    background-size: cover;
+    background-position: center;
 }
 form{
    background-color: rgb(97, 97, 97);
@@ -22,13 +24,12 @@ a{
     text-decoration: none;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 1%;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 20px 40px;
     margin-left: 45%;
-    margin-top: 500px;
+    margin-top: 80px;
+    margin-bottom: 60px;
     font-weight: bolder;
+    display: inline-block;
 }
 
 a:hover{
@@ -38,10 +39,35 @@ a:hover{
 
 h1{
     background-color: rgb(39, 39, 39);
+    width: 250px;
+    text-align: center ;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 .imagen{
     width: 300px;
     height: 300px;
+}
+.fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(43, 42, 42, 0.705);
+}
+.contenedor_qr{
+    background-color: rgb(207, 207, 207);
+    width: 60%;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: 10px 15px 10px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
 }

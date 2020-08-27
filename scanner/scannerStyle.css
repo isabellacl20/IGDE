@@ -1,0 +1,29 @@
+body{
+    width:100%;
+    text-align:center;
+}
+#mainbody{
+    background: white;
+    width:100%;
+	display:none;
+}
+#v{
+    width:320px;
+    height:240px;
+}
+#qr-canvas{
+    display:none;
+}
+#outdiv
+{
+    width:320px;
+    height:240px;
+	border: solid;
+	border-width: 3px 3px 3px 3px;
+}
+#result{
+    border: solid;
+	border-width: 1px 1px 1px 1px;
+	padding:20px;
+    width:30%;
+}

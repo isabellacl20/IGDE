@@ -1,6 +1,9 @@
 body{
     width:100%;
     text-align:center;
+    background-image: url(../imagenesigde/pexels-josh-sorenson-1714205.jpg);
+    background-size: cover;
+    background-position: center;
 }
 #mainbody{
     background: white;
@@ -16,14 +19,17 @@ body{
 }
 #outdiv
 {
+
     width:320px;
     height:240px;
-	border: solid;
+    border: 2px solid white;
+    margin: 50px auto;
 	border-width: 3px 3px 3px 3px;
 }
 #result{
-    border: solid;
 	border-width: 1px 1px 1px 1px;
 	padding:20px;
     width:30%;
+    margin: 20px auto;
+    text-align: center;
 }

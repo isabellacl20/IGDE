@@ -31,9 +31,10 @@
     <div id="outdiv"></div>
 
     <form action="scanner.php" method="post">
+    
         <textarea name="identificador" id="result" cols="5" rows="1"></textarea>
 
-        <input type="submit" name="entrada" value="Registrar Entrada">
+        <br><input type="submit" name="entrada" value="Registrar Entrada"><br>
         <input type="submit" name="salida" value="Registrar Salida">
     </form>
 

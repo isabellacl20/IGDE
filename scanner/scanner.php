@@ -36,6 +36,26 @@
 
         <br><input type="submit" name="entrada" value="Registrar Entrada"><br>
         <input type="submit" name="salida" value="Registrar Salida">
+        <?php
+        include('../conectar.php');
+        if(isset($_POST['entrada'])){
+          
+            $id_usuario = $_POST['identificador'];
+            $fecha = date("Y-m-d"); //obtener fecha actual, del servidor
+            $hora = date("H:i"); //Obtener hora actual
+            $conectar->query("INSERT INTO $tablaentrada VALUES ('', '$id_usuario', '$fecha','$hora')");
+        }
+        if(isset($_POST['salida'])){
+            
+            $id_usuario = $_POST['identificador'];
+            $fecha = date("Y-m-d"); //obtener fecha actual, del servidor
+            $hora = date("H:i"); //Obtener hora actual
+            $conectar->query("INSERT INTO $tablasalida VALUES ('', '$id_usuario', '$fecha','$hora')");
+        }
+
+
+
+        ?>
     </form>
 
     <div id="webcamimg"></div>

@@ -41,16 +41,14 @@
         if(isset($_POST['entrada'])){
           
             $id_usuario = $_POST['identificador'];
-            $fecha = date("Y-m-d"); //obtener fecha actual, del servidor
-            $hora = date("H:i"); //Obtener hora actual
-            $conectar->query("INSERT INTO $tablaentrada VALUES ('', '$id_usuario', '$fecha','$hora')");
+        
+            $conectar->query("INSERT INTO $tablaentrada VALUES ('', '$id_usuario', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)");
         }
         if(isset($_POST['salida'])){
             
             $id_usuario = $_POST['identificador'];
-            $fecha = date("Y-m-d"); //obtener fecha actual, del servidor
-            $hora = date("H:i"); //Obtener hora actual
-            $conectar->query("INSERT INTO $tablasalida VALUES ('', '$id_usuario', '$fecha','$hora')");
+           
+            $conectar->query("INSERT INTO $tablasalida VALUES ('', '$id_usuario', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)");
         }
 
 

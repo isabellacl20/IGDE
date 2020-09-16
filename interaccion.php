@@ -10,76 +10,41 @@
 <body>
     
         
-        <form action="interaccion.php" method="POST">
+<form action="interaccion.php" method="POST">
             <h1>REGISTRARSE</h1>
-            <label for="name">Ingrese su nombre</label>
-            <input type="text" name="nombreusuario" id="name" >
-            <br><br>
-            <label>
-                Apellidos
-                <input type="text" name="apellidos">
-            </label>
-            <br><br>
-            <label>
-                Tipo de sangre
-                <input type="text" name="tiposangre">
-            </label>
-            <br><br>
-            <label>
-                Número de documento de identidad
-                <input type="number" name="documento">
-            </label>     
-                <br>
-                <br>
-            <label>
-                 Número telefónico
-                 <input type="number" name="telefono">
-            </label>     
-                <br>
-                <br>
-            <label>
-                Correo electrónico
-                <input type="email" name="correo" placeholder="ejemplo@ejemplo.com">
-            </label>     
-                <br>
-                <br>
-            <label>
-                Empresa en la que trabaja
-                <input type="text" name="empresa">
-             </label>
-            <br><br>
-            <label>
-               Horario de trabajo
-                <input type="number" name="horario">
-           </label>     
-               <br>
-               <br>
-            <label>
-                Cargo que ocupa dentro de la empresa
-                <input type="text" name="cargo">
-            </label>
-            <br><br>
-            <label>
-                Fecha de ingreso
-                <input type="date" name="fechaingreso">
-            </label>
+            <div class="datos">
+                <div id="labels">
+                    <label for="nombreusuario">Ingrese su nombre</label>
+                    <label for="apellidos">Apellidos</label>
+                    <label for="tiposangre">Tipo de sangre</label>
+                    <label for="documento">Número de documento de identidad</label>
+                    <label for="telefono">Número telefónico</label> 
+                    <label for="correo">Correo electrónico</label>
+                    <label for="empresa">Empresa en la que trabaja</label>                
+                    <label for="horario">Horario de trabajo</label>
+                    <label for="cargo">Cargo que ocupa dentro de la empresa</label>
+                    <label for="fechaingreso">Fecha de ingreso</label>
+                    <label for="contacto">Contacto de emergencia</label>                
+                    <label for="Guardar">Contraseña</label>
+                </div>
+                
+                <div id="inputs">
+                    <input type="text" name="nombreusuario" id="name" >
+                    <input type="text" name="apellidos">
+                    <input type="text" name="tiposangre"> 
+                    <input type="number" name="documento">   
+                    <input type="number" name="telefono">
+                    <input type="email" name="correo" placeholder="ejemplo@ejemplo.com">
+                    <input type="text" name="empresa">
+                    <input type="number" name="horario">
+                    <input type="text" name="cargo">
+                    <input type="date" name="fechaingreso">
+                    <input type="number" name="contacto">
+                    <input type="password" name="contraseña">
+                </div>
+            </div>       
             
-            <br><br>
-            <label>
-                Número telefónico de un contacto de emergencia
-                <input type="number" name="contacto">
-            </label>
-            <br><br>
-            <label>
-                Contraseña
-                <input type="password" name="contraseña">
-            </label>
-            <br><br>
-            
-        
             <input name="Guardar" type="submit" value="Guardar">
-
-            
 
         </form>
 

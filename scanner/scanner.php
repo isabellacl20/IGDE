@@ -73,7 +73,7 @@
 
     <canvas id="qr-canvas" width="800" height="600"></canvas>
     <script type="text/javascript">load();</script>
-
-    <a href="IGDE.html">VOLVER</a>
+    
+    <a href="../IGDE.html">VOLVER</a>
 </body>
 </html>

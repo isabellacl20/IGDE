@@ -9,6 +9,7 @@ $tablaempleados = "empleados"; //Variable donde se guarda la tabla que esta en l
 $tablasalida = "salida";
 $tablaentrada = "entrada";
 
+
 error_reporting(); //No permite que aparezcan errores (en caso de haberlos)
 
 $conectar = new mysqli($host, $usuario, $contraseña, $baseDatos); //Variable "$conectar" donde se guarda la conexión a la base de datos

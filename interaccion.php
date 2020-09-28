@@ -112,6 +112,7 @@
       }
       if($buscar>0){echo"Ya existe este documento";}
       elseif($contraseña == $clave){$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto')");echo"Su usuario ha sido creado con éxito";
+
         // include("desconectar.php");
 
         ?>
@@ -128,9 +129,6 @@
         
 
     <?php
-    }
-    else{echo "contraseña incorrecta, no se pudo registrar el usuario";}
-
 
      }
 

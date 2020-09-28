@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    error_reporting(0);
+    $doc = $_SESSION['logeado'];
+    if($doc == ""){
+        header("location:ingresar.php");
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +18,7 @@
     <link rel="stylesheet" href="Registrarse.css">
 </head>
 <body>
-    
+   
         
 <form action="interaccion.php" method="POST">
             <h1>REGISTRARSE</h1>
@@ -25,7 +35,7 @@
                     <label for="cargo">Cargo que ocupa dentro de la empresa</label>
                     <label for="fechaingreso">Fecha de ingreso</label>
                     <label for="contacto">Contacto de emergencia</label>                
-                    <label for="Guardar">Contraseña</label>
+
                 </div>
                 
                 <div id="inputs">
@@ -40,7 +50,7 @@
                     <input type="text" name="cargo">
                     <input type="date" name="fechaingreso">
                     <input type="number" name="contacto">
-                    <input type="password" name="contraseña">
+               
                 </div>
             </div>       
             
@@ -49,7 +59,7 @@
         </form>
 
 
-    <a href="IGDE.html">VOLVER</a>
+        <a href="cerrarsesion.php">SALIR</a>
     <?php
      if(isset($_POST['Guardar'])){
         include('conectar.php');
@@ -65,8 +75,8 @@
         $cargo = $_POST['cargo'];
         $fechaingreso = $_POST['fechaingreso'];
         $contacto = $_POST['contacto'];
-        $contraseña = $_POST['contraseña'];
-        $clave = "Isabella";
+
+   
        //En la variable $datos se guarda la consulta de la tabla del estudainte 
       $datos = mysqli_query($conectar, "SELECT * FROM  $tablaempleados  WHERE documento = '$identificacion'" );
       //se crea un while que recorra es variable $datos y cada registro que encuntre lo guarda en $consulta
@@ -76,7 +86,7 @@
          $buscar++;
       }
       if($buscar>0){echo"Ya existe este documento";}
-      elseif($contraseña == $clave){$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto')");echo"Su usuario ha sido creado con éxito";
+      else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto')");echo"Su usuario ha sido creado con éxito";
         // include("desconectar.php");
 
         ?>
@@ -94,7 +104,7 @@
 
     <?php
     }
-    else{echo "contraseña incorrecta, no se pudo registrar el usuario";}
+  
 
 
      }

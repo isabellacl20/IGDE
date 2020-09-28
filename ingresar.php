@@ -1,4 +1,13 @@
-<form action="ingresar.php" method="POST">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+
+    <form action="ingresar.php" method="POST">
             <h1>INGRESAR</h1>
             <div class="datosing">
                 <div id="labels">
@@ -42,6 +51,11 @@
                 }
                 mysql_close($conectar);
             }
-        ?>
+        
 
+        
+     ?>
     </form>
+        
+</body>
+</html>

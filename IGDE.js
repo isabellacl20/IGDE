@@ -14,3 +14,7 @@ function GenerarQR(){
  function reload(){
      document.location.reload(true);
  }
+ 
+ function cerrar(){
+     document.getElementById("ventanaqr").style.opacity=0;
+ }

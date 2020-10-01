@@ -55,6 +55,9 @@
             </div>       
             
             <input name="Guardar" type="submit" value="Guardar">
+            <input name="Ver tablas" type="submit" value="Ver tablas">
+            
+
 
       
 
@@ -94,6 +97,7 @@
         <div class="fondo" id="ventanaqr">
             <div class="contenedor_qr">
                 <a href="javascript:cerrar()">Cerrar</a>
+                
                 <img src="imagenesigde/Logo igde.png" alt="qr-cod" class="imagen">
                 <textarea readonly><?php echo "$identificacion"; ?> </textarea>
 

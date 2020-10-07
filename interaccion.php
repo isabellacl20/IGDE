@@ -101,7 +101,7 @@
         $fechaingreso = $_POST['fechaingreso'];
         $contacto = $_POST['contacto'];
         $contraseña = $_POST['contraseña'];
-        $clave = "Isabella";
+        
        //En la variable $datos se guarda la consulta de la tabla del estudainte 
       $datos = mysqli_query($conectar, "SELECT * FROM  $tablaempleados  WHERE documento = '$identificacion'" );
       //se crea un while que recorra es variable $datos y cada registro que encuntre lo guarda en $consulta
@@ -111,7 +111,7 @@
          $buscar++;
       }
       if($buscar>0){echo"Ya existe este documento";}
-      elseif($contraseña == $clave){$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto')");echo"Su usuario ha sido creado con éxito";
+      else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto','contraseña')");echo"Su usuario ha sido creado con éxito";}
 
         // include("desconectar.php");
 

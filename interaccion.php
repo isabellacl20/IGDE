@@ -122,7 +122,21 @@
             </div>
         </div>
 
-        
+
+         <div id="inputs">
+            <input type="text" name="nombreusuario" id="name" required>
+            <input type="text" name="apellidos" id="apellidos" required>
+            <input type="text" name="tiposangre" id="tiposangre" required>
+            <input type="number" name="documento" id="documento" required>
+            <input type="number" name="telefono" id="telefono" required>
+            <input type="email" name="correo" placeholder="ejemplo@ejemplo.com" id="correo" required>
+            <input type="text" name="empresa" id="empresa">
+            <input type="text" name="horario" id="horario" placeholder="7:00am - 5:00pm" required>
+            <input type="text" name="cargo" id="cargo" required>
+            <input type="date" name="fechaingreso" id="fechaingreso" required>
+            <input type="number" name="contacto" id="contacto" required>
+         </div>
+        </div>
 
     <?php
 

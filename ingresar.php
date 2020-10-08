@@ -3,6 +3,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ingreso.css">
         <title>Document</title>
 </head>
 <body>
@@ -23,38 +24,38 @@
      <input name="Ingresar" type="submit" value="Ingresar">
      <?php
          
-            if(isset($_POST['Ingresar'])){
-                
-                include('conectar.php');
-                $usuario = $_POST["nombreusuario"];
-                $contra = $_POST["contraseña"];
-                
+         if(isset($_POST['Ingresar'])){
+             
+             include('conectar.php');
+             $usuario = $_POST["nombreusuario"];
+             $contra = $_POST["contraseña"];
+             
 
-                if($usuario == "" || $contra == ""){
-                    echo"<h6>Por favor llene todos los campos para ingresar</h6>";
-                }else{
-                    $buscar=0;
-                    $datos = mysqli_query($conectar, "SELECT * FROM $tablaadministrador WHERE usuario = '$usuario' AND contraseña ='$contra'");
-                    while($consulta = mysqli_fetch_array($datos)){
-                        $buscar++;
-                    }
+             if($usuario == "" || $contra == ""){
+                 echo"<h6>Por favor llene todos los campos para ingresar</h6>";
+             }else{
+                 $buscar=0;
+                 $datos = mysqli_query($conectar, "SELECT * FROM $tablaadministrador WHERE usuario = '$usuario' AND contraseña ='$contra'");
+                 while($consulta = mysqli_fetch_array($datos)){
+                     $buscar++;
+                 }
 
-                    if($buscar == 0){
-                        echo "<h6>Datos incorrectos</h6>";
-                    }else{
-                        session_start();
-                        $_SESSION['logeado']= $usuario;
-                        
-                        header("location:interaccion.php");
-                    }
-                    mysqli_free_result($datos);
-                }
-                mysql_close($conectar);
-            }
-        
+                 if($buscar == 0){
+                     echo "<h6>Datos incorrectos</h6>";
+                 }else{
+                     session_start();
+                     $_SESSION['logeado']= $usuario;
+                     
+                     header("location:interaccion.php");
+                 }
+                 mysqli_free_result($datos);
+             }
+             mysql_close($conectar);
+         }
+     
 
-        
-     ?>
+     
+  ?>
     </form>
         
 </body>

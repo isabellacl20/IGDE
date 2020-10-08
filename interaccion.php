@@ -78,13 +78,8 @@
             
         
             <input name="Guardar" type="submit" value="Guardar">
-
-            
-
-        </form>
-
-
-    <a href="IGDE.html">VOLVER</a>
+            <input name="Ver tablas" type="submit" value="Ver tablas">
+       
     <?php
      if(isset($_POST['Guardar'])){
         include('conectar.php');
@@ -110,15 +105,16 @@
       while($consulta = mysqli_fetch_array ($datos)) {
          $buscar++;
       }
-      if($buscar>0){echo"Ya existe este documento";}
-      else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto','contraseña')");echo"Su usuario ha sido creado con éxito";}
-
+      if($buscar>0){echo"<h2>Ya existe este documento</h2>";}
+      else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto')");echo"Su usuario ha sido creado con éxito";
         // include("desconectar.php");
 
         ?>
         
-        <div class="fondo">
+        <div class="fondo" id="ventanaqr">
             <div class="contenedor_qr">
+                <a href="javascript:cerrar()">Cerrar</a>
+                
                 <img src="imagenesigde/Logo igde.png" alt="qr-cod" class="imagen">
                 <textarea readonly><?php echo "$identificacion"; ?> </textarea>
 
@@ -133,7 +129,8 @@
      }
 
      ?>
-     
+       </form>
+       <a href="cerrarsesion.php">SALIR</a>
      
      <script src="IGDE.js"></script> 
 </body>

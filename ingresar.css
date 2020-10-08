@@ -1,0 +1,51 @@
+body{
+    background-image: url(./imagenesigde/pexels-dominika-roseclay-1036808.jpggit);
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    border: 2px solid white;
+    margin: 0 auto;
+    width: 250px;
+    text-align: center ;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    background-color: rgba(24, 24, 24, 0.945);
+    width: 50%;
+    align-self: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.507);
+    margin: 3% auto;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    color: white;
+ }
+ #labels label{
+    display: block;
+    text-align: center;
+    margin: 15px 5px 0px 0px;
+}
+#inputs input{    
+    width: 200px;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+}
+#labels, #inputs{
+    width: 48%;
+}
+input[type="submit"]{
+    display: block;
+    width: 180px;
+    padding: 10px;
+    margin: 20px auto 0px auto;
+}
+
+.datosing{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-left: 30px;
+}

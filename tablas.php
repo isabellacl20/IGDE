@@ -80,7 +80,6 @@
                         $horario = $consultaEditar['horario'];
                         $fechaIngreso = $consultaEditar['fechaingreso'];
                         $contactoEmerg = $consultaEditar['contacto'];
-                        
                         echo "<form action='tablas.php' method='post'>
                                 <input type='hidden' name='documento' value='$doc'>
                                 <input type='text' name='document' value='$doc'>

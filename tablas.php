@@ -105,6 +105,8 @@
                     echo "Debe hacer una selección para eliminar";
                 }else{
                     $idEliminar = $_POST['identificador'];
+                    $eliminarE = mysqli_query($conectar, "DELETE FROM $tablaentrada WHERE identificacion_usuario = '$idEliminar'");
+                    $eliminarS = mysqli_query($conectar, "DELETE FROM $tablasalida WHERE identificacion_usuario = '$idEliminar'");
                     mysqli_query($conectar, "DELETE FROM $tablaempleados WHERE documento = '$idEliminar'");
                     // header("location:tablas.php");
                 }

@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    error_reporting(0);
+    $doc = $_SESSION['logeado'];
+    if($doc == ""){
+        header("location:ingresar.php");
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,78 +18,43 @@
     <link rel="stylesheet" href="Registrarse.css">
 </head>
 <body>
-    
+   
         
-        <form action="interaccion.php" method="POST">
+<form action="interaccion.php" method="POST">
             <h1>REGISTRARSE</h1>
-            <label for="name">Ingrese su nombre</label>
-            <input type="text" name="nombreusuario" id="name" >
-            <br><br>
-            <label>
-                Apellidos
-                <input type="text" name="apellidos">
-            </label>
-            <br><br>
-            <label>
-                Tipo de sangre
-                <input type="text" name="tiposangre">
-            </label>
-            <br><br>
-            <label>
-                Número de documento de identidad
-                <input type="number" name="documento">
-            </label>     
-                <br>
-                <br>
-            <label>
-                 Número telefónico
-                 <input type="number" name="telefono">
-            </label>     
-                <br>
-                <br>
-            <label>
-                Correo electrónico
-                <input type="email" name="correo" placeholder="ejemplo@ejemplo.com">
-            </label>     
-                <br>
-                <br>
-            <label>
-                Empresa en la que trabaja
-                <input type="text" name="empresa">
-             </label>
-            <br><br>
-            <label>
-               Horario de trabajo
-                <input type="number" name="horario">
-           </label>     
-               <br>
-               <br>
-            <label>
-                Cargo que ocupa dentro de la empresa
-                <input type="text" name="cargo">
-            </label>
-            <br><br>
-            <label>
-                Fecha de ingreso
-                <input type="date" name="fechaingreso">
-            </label>
+            <div class="datos">
+                <div id="labels">
+                    <label for="nombreusuario">Ingrese su nombre</label>
+                    <label for="apellidos">Apellidos</label>
+                    <label for="tiposangre">Tipo de sangre</label>
+                    <label for="documento">Número de documento de identidad</label>
+                    <label for="telefono">Número telefónico</label> 
+                    <label for="correo">Correo electrónico</label>
+                    <label for="empresa">Empresa en la que trabaja</label>                
+                    <label for="horario">Horario de trabajo</label>
+                    <label for="cargo">Cargo que ocupa dentro de la empresa</label>
+                    <label for="fechaingreso">Fecha de ingreso</label>
+                    <label for="contacto">Contacto de emergencia</label>                
+
+                </div>
+                
+                <div id="inputs">
+                  <input type="text" name="nombreusuario" id="name" required>
+                  <input type="text" name="apellidos" id="apellidos" required>
+                  <input type="text" name="tiposangre" id="tiposangre" required>
+                  <input type="number" name="documento" id="documento" required>
+                  <input type="number" name="telefono" id="telefono" required>
+                  <input type="email" name="correo" placeholder="ejemplo@ejemplo.com" id="correo" required>
+                  <input type="text" name="empresa" id="empresa">
+                  <input type="text" name="cargo" id="cargo" required>
+                  <input type="date" name="fechaingreso" id="fechaingreso" required>
+                  <input type="number" name="contacto" id="contacto" required>
+                </div>
+            </div>       
             
-            <br><br>
-            <label>
-                Número telefónico de un contacto de emergencia
-                <input type="number" name="contacto">
-            </label>
-            <br><br>
-            <label>
-                Contraseña
-                <input type="password" name="contraseña">
-            </label>
-            <br><br>
-            
-        
             <input name="Guardar" type="submit" value="Guardar">
-            <input name="Ver tablas" type="submit" value="Ver tablas">
-       
+            <a href="tablas.php">Ver tablas</a>
+         
     <?php
      if(isset($_POST['Guardar'])){
         include('conectar.php');
@@ -95,8 +70,8 @@
         $cargo = $_POST['cargo'];
         $fechaingreso = $_POST['fechaingreso'];
         $contacto = $_POST['contacto'];
-        $contraseña = $_POST['contraseña'];
-        
+
+   
        //En la variable $datos se guarda la consulta de la tabla del estudainte 
       $datos = mysqli_query($conectar, "SELECT * FROM  $tablaempleados  WHERE documento = '$identificacion'" );
       //se crea un while que recorra es variable $datos y cada registro que encuntre lo guarda en $consulta
@@ -113,7 +88,7 @@
         
         <div class="fondo" id="ventanaqr">
             <div class="contenedor_qr">
-                <a href="javascript:cerrar()">Cerrar</a>
+                <a href="interaccion.php">Cerrar</a>
                 
                 <img src="imagenesigde/Logo igde.png" alt="qr-cod" class="imagen">
                 <textarea readonly><?php echo "$identificacion"; ?> </textarea>
@@ -122,23 +97,12 @@
             </div>
         </div>
 
-
-         <div id="inputs">
-            <input type="text" name="nombreusuario" id="name" required>
-            <input type="text" name="apellidos" id="apellidos" required>
-            <input type="text" name="tiposangre" id="tiposangre" required>
-            <input type="number" name="documento" id="documento" required>
-            <input type="number" name="telefono" id="telefono" required>
-            <input type="email" name="correo" placeholder="ejemplo@ejemplo.com" id="correo" required>
-            <input type="text" name="empresa" id="empresa">
-            <input type="text" name="horario" id="horario" placeholder="7:00am - 5:00pm" required>
-            <input type="text" name="cargo" id="cargo" required>
-            <input type="date" name="fechaingreso" id="fechaingreso" required>
-            <input type="number" name="contacto" id="contacto" required>
-         </div>
-        </div>
+        
 
     <?php
+    }
+  
+
 
      }
 

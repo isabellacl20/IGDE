@@ -1,5 +1,7 @@
 body{
-    background-image: url(./imagenesigde/pexels-dominika-roseclay-1036808.jpggit);
+    background-image: url(./imagenesigde/pexels-lukas-1420709.jpg);
+    width:100%;
+    text-align:center;
     background-size: cover;
     background-position: center;
 }

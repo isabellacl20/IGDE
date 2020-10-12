@@ -3,7 +3,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="ingreso.css">
+        <link rel="stylesheet" href="ingresar.css">
         <title>Document</title>
 </head>
 <body>

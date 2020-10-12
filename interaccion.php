@@ -88,7 +88,7 @@
         
         <div class="fondo" id="ventanaqr">
             <div class="contenedor_qr">
-                <a href="interaccion.php">Cerrar</a>
+                <a href="javascript:cerrar()">Cerrar</a>
                 
                 <img src="imagenesigde/Logo igde.png" alt="qr-cod" class="imagen">
                 <textarea readonly><?php echo "$identificacion"; ?> </textarea>

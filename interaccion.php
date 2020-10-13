@@ -46,6 +46,7 @@
                   <input type="number" name="telefono" id="telefono" required>
                   <input type="email" name="correo" placeholder="ejemplo@ejemplo.com" id="correo" required>
                   <input type="text" name="empresa" id="empresa">
+                  <input type="text" name="horario" id="horario" require>
                   <input type="text" name="cargo" id="cargo" required>
                   <input type="date" name="fechaingreso" id="fechaingreso" required>
                   <input type="number" name="contacto" id="contacto" required>

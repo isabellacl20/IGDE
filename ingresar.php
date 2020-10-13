@@ -3,8 +3,9 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="ingreso.css">
-        <title>Document</title>
+        <link rel="stylesheet" href="ingresar.css">
+        <link rel="shortcut icon" href="./imagenesigde/Logo igde.png" type="image/x-icon"> 
+        <title>INGRESAR</title>
 </head>
 <body>
 

@@ -93,3 +93,14 @@ h1{
 #labels, #inputs{
     width: 48%;
 }
+
+@media (max-width: 900px) {
+    form{
+        width: 80%;
+    }
+}
+@media (max-width: 600px) {
+    form{
+        width: 94%;
+    }
+}

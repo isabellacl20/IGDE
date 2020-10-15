@@ -27,12 +27,12 @@
                     <label for="nombreusuario">Ingrese su nombre</label>
                     <label for="apellidos">Apellidos</label>
                     <label for="tiposangre">Tipo de sangre</label>
-                    <label for="documento">Número de documento de identidad</label>
+                    <label for="documento">Identificacion</label>
                     <label for="telefono">Número telefónico</label> 
                     <label for="correo">Correo electrónico</label>
                     <label for="empresa">Empresa en la que trabaja</label>                
                     <label for="horario">Horario de trabajo</label>
-                    <label for="cargo">Cargo que ocupa dentro de la empresa</label>
+                    <label for="cargo">Cargo</label>
                     <label for="fechaingreso">Fecha de ingreso</label>
                     <label for="contacto">Contacto de emergencia</label>                
 

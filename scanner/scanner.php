@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="scannerStyle.css">
+    <link rel="icon" href="../imagenesigde/Logo igde.png">
+    <title>IGDE-Escanear</title>
     
     <script type="text/javascript" src="llqrcode.js"></script>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>

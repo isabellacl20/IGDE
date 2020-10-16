@@ -13,9 +13,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IGDE-Registrarse</title>
     <link rel="stylesheet" href="IGDE.html">
     <link rel="stylesheet" href="Registrarse.css">
+    <link rel="icon" href="imagenesigde/Logo igde.png">
 </head>
 <body>
    
@@ -46,6 +47,7 @@
                   <input type="number" name="telefono" id="telefono" required>
                   <input type="email" name="correo" placeholder="ejemplo@ejemplo.com" id="correo" required>
                   <input type="text" name="empresa" id="empresa">
+                  <input type="text" name="horario" id="horario" require>
                   <input type="text" name="cargo" id="cargo" required>
                   <input type="date" name="fechaingreso" id="fechaingreso" required>
                   <input type="number" name="contacto" id="contacto" required>

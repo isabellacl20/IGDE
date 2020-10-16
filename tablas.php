@@ -14,7 +14,7 @@
                 echo  "<form action='tablas.php' method='POST'>
                         <table>
                         <tr>
-                            <td>Selección</td>
+                            <td></td>
                             <td>Documento</td>
                             <td>Nombre</td>
                             <td>Apellidos</td>

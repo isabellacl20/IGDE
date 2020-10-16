@@ -139,7 +139,8 @@
 
 //////////////////////////////// tabla de Entrada 
 
-        echo "<div class='tablaEntrada'>";        
+        echo "<div class='tablaEntrada'>;    
+            <h1> Registro de entradas </h1>";    
             echo  "<table>
                     <tr>
                         <td>Identificación</td>
@@ -164,7 +165,8 @@
 
 //////////////////////////////// tabla de Salida 
 
-        echo "<div class='tablaSalida'>";        
+        echo "<div class='tablaSalida'>;   
+            <h1> Registro de salidas </h1>";     
             echo  "<table>
                     <tr>
                         <td>Identificación</td>

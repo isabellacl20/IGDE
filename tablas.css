@@ -1,87 +1,80 @@
-body{
-    margin: 0;
-    /* background-color: rgba(226, 213, 97, 0.603); */
-    background-image: url(./imagenesigde/fontotabla.jpg); 
-    background-size: cover;
+
+    body{
+        margin: 0;
+        background-color: rgba(76, 0, 255, 0.205);
+        /* background-color: rgba(226, 213, 97, 0.603); */
+        background-image: url(./imagenesigde/fontotabla.jpg); 
+        background-size: cover;
     
-}
-.tablaUsuarios{
-    background-color:rgba(53, 170, 216, 0.329);
-    width: 85%;
-    align-self: center;
-    justify-content: center;
-    margin: 1% auto;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px 10px;
-    color: white;
-}
-
-table{
-    color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-
-}
-tr{
-    border: 0.01px solid white;
-    background-color: rgba(53, 170, 216, 0.329);
-    width: 100%;
-    align-self: center;
-    justify-content: center;
-    margin: 1% auto;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px 10px;
-    color: white;
-    display: flex;
-
-}
-td{
-    padding: 2px 5px; 
-    border: 0.01px solid white;
-    background-color: rgba(53, 170, 216, 0.329);
-    width: 30%;
-    align-self: center;
-    justify-content: center;
-    margin: 1% auto;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px 10px; 
-    color: white;
-    display: flex;
-
-}
-
-input{
-    display: block;
-    text-align: center;
-}
-input[type='submit']{
-    display: inline;
-    background-color: rgba(24, 24, 24, 0.945);
-    list-style: none;
-    text-decoration: none;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 7px 7px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: bolder;
+    }
+    .tablaUsuarios{
+        background-color:rgba(53, 170, 216, 0.329);
+        width: 95%;
+        align-self: center;
+        justify-content: center;
+        margin: 1% auto;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px 10px;
+        color: white;
+    }
     
-}
-tablaEntrada, .tablaSalida{ 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    table{
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    
+    }
+    tr{
+        border: 0.01px solid white;
+        background-color: rgba(53, 170, 216, 0.329);
+        width: 100%;
+        align-self: center;
+        justify-content: center;
+        margin: 1% auto;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px 10px;
+        color: white;
+    
+    }
+    td{
+        padding: 2px 5px;
+        padding: 2px 5px; 
+        border: 0.01px solid white;
+        background-color: rgba(53, 170, 216, 0.329);
+        width: 30%;
+        align-self: center;
+        justify-content: center;
+        margin: 1% auto;
+        font-family: Arial, Helvetica, sans-serif;
+        /* padding: 5px 10px; */
+        color: white;
+    
+    }
+    
 
-}
-.tablaEntrada h1, .tablaSalida h1{
-    color: white;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    font-family: sans-serif;
-    background-color: rgba(53, 170, 216, 0.329);
+    input[type='submit']{
+        display: inline;
+        background-color: rgba(24, 24, 24, 0.945);
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 7px 7px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: bolder;
+    
+    }
 
-}
-.tablaSalida{
-    margin-top: 20px;
-}
+    .tablaEntrada, .tablaSalida{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tablaUsuarios h1, .tablaEntrada h1, .tablaSalida h1{
+        background-color: rgba(53, 170, 216, 0.329) ;
+        color: white;
+        letter-spacing: 3px;
+    }

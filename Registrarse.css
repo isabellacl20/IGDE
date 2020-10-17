@@ -91,6 +91,17 @@ h1{
     flex-direction: column;
 
 }
+.contenedor_qr a{
+    margin: 0px ;
+}
+.contenedor_qr button{
+    display: block;
+    width: 150px;
+    padding: 8px;
+    margin: 20px auto 0px auto;
+
+
+}
 #labels, #inputs{
     width: 48%;
 }

@@ -58,55 +58,56 @@
             <a href="tablas.php">Ver tablas</a>
          
     <?php
-     if(isset($_POST['Guardar'])){
-        include('conectar.php');
+      if(isset($_POST['Guardar'])){
+         include('conectar.php');
 
-        $nombre = $_POST['nombreusuario'];
-        $apellido = $_POST['apellidos'];
-        $tipodesangre = $_POST['tiposangre'];
-        $identificacion = $_POST['documento'];
-        $telefono = $_POST['telefono'];
-        $correo = $_POST['correo'];
-        $empresa = $_POST['empresa'];
-        $horario = $_POST['horario'];
-        $cargo = $_POST['cargo'];
-        $fechaingreso = $_POST['fechaingreso'];
-        $contacto = $_POST['contacto'];
+         $nombre = $_POST['nombreusuario'];
+         $apellido = $_POST['apellidos'];
+         $tipodesangre = $_POST['tiposangre'];
+         $identificacion = $_POST['documento'];
+         $telefono = $_POST['telefono'];
+         $correo = $_POST['correo'];
+         $empresa = $_POST['empresa'];
+         $horario = $_POST['horario'];
+         $cargo = $_POST['cargo'];
+         $fechaingreso = $_POST['fechaingreso'];
+         $contacto = $_POST['contacto'];
 
    
-       //En la variable $datos se guarda la consulta de la tabla del estudainte 
-      $datos = mysqli_query($conectar, "SELECT * FROM  $tablaempleados  WHERE documento = '$identificacion'" );
-      //se crea un while que recorra es variable $datos y cada registro que encuntre lo guarda en $consulta
-      $buscar = 0;
+        //En la variable $datos se guarda la consulta de la tabla del estudainte 
+       $datos = mysqli_query($conectar, "SELECT * FROM  $tablaempleados  WHERE documento = '$identificacion'" );
+       //se crea un while que recorra es variable $datos y cada registro que encuntre lo guarda en $consulta
+       $buscar = 0;
 
-      while($consulta = mysqli_fetch_array ($datos)) {
-         $buscar++;
-      }
+       while($consulta = mysqli_fetch_array ($datos)) {
+          $buscar++;
+       }
       if($buscar>0){echo"<h2>Ya existe este documento</h2>";}
-      else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto')");echo"Su usuario ha sido creado con éxito";
-        // include("desconectar.php");
+       else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto')");echo"Su usuario ha sido creado con éxito";
+         // include("desconectar.php");
 
         ?>
         
         <div class="fondo" id="ventanaqr">
             <div class="contenedor_qr">
-                <a href="interaccion.php">Cerrar</a>
+              
                 
                 <img src="imagenesigde/Logo igde.png" alt="qr-cod" class="imagen">
                 <textarea readonly><?php echo "$identificacion"; ?> </textarea>
 
                 <button>Generar codigo QR</button>
+                <a href="interaccion.php">Cerrar</a>
             </div>
         </div>
 
         
 
     <?php
-    }
+     }
   
 
 
-     }
+      }
 
      ?>
        </form>

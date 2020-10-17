@@ -10,7 +10,8 @@
     <?php
         include('conectar.php');
 //////////////////////////////// tabla de Empleados
-        echo "<div class='tablaUsuarios'>";        
+        echo "<div class='tablaUsuarios'>
+             <h1> Tabla Usuarios </h1>" ;
                 echo  "<form action='tablas.php' method='POST'>
                         <table>
                         <tr>

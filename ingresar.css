@@ -1,5 +1,7 @@
 body{
-    background-image: url(./imagenesigde/pexels-dominika-roseclay-1036808.jpggit);
+    background-image: url(./imagenesigde/pexels-lukas-1420709.jpg);
+    width:100%;
+    text-align:center;
     background-size: cover;
     background-position: center;
 }
@@ -28,7 +30,7 @@ form{
     margin: 15px 5px 0px 0px;
 }
 #inputs input{    
-    width: 200px;
+    width: 90%;
     display: block;
     text-align: center;
     margin-top: 12px;

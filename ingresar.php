@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="ingresar.css">
-        <title>Document</title>
+        <link rel="shortcut icon" href="./imagenesigde/Logo igde.png" type="image/x-icon"> 
+        <title>IGDE-Ingresar</title>
+        <link rel="icon" href="imagenesigde/Logo igde.png">
 </head>
 <body>
 

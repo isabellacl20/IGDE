@@ -37,21 +37,113 @@
         <textarea name="identificador" id="result" cols="5" rows="1"></textarea>
 
         <br><input type="submit" name="entrada" value="Registrar Entrada"><br>
-        <input type="submit" name="salida" value="Registrar Salida">
+        <input type="submit" name="salida" value="Registrar Salida"><br>
+        <input type="submit" name="consultar" value="Consultar Usuario">
+
         <?php
         include('../conectar.php');
         if(isset($_POST['entrada'])){
           
             $id_usuario = $_POST['identificador'];
         
-            $conectar->query("INSERT INTO $tablaentrada VALUES ('', '$id_usuario', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)");
+            $buscar=0;
+            $datos = mysqli_query($conectar, "SELECT * FROM $tablaempleados WHERE documento = '$id_usuario'");
+            while($consulta = mysqli_fetch_array($datos)){
+                $buscar++;
+            }
+            echo"<div class='fondo'>
+                        <div class='info_usuario'>
+                            <a href='scanner.php'>X</a>";
+            if($buscar == 0){
+                echo "      <h4><span>No se puede registrar entrada <br> Usuario no registrado.</span></h4>";
+            }else{
+                $conectar->query("INSERT INTO $tablaentrada VALUES ('', '$id_usuario', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)");
+                echo "      <h4><span>Se registró entrada exitosamente.</span></h4>";
+            }
+            echo"   </div>
+                </div>";
+
         }
         if(isset($_POST['salida'])){
             
             $id_usuario = $_POST['identificador'];
            
-            $conectar->query("INSERT INTO $tablasalida VALUES ('', '$id_usuario', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)");
+            $buscar=0;
+            $datos = mysqli_query($conectar, "SELECT * FROM $tablaempleados WHERE documento = '$id_usuario'");
+            while($consulta = mysqli_fetch_array($datos)){
+                $buscar++;
+            }
+            echo"<div class='fondo'>
+                        <div class='info_usuario'>
+                            <a href='scanner.php'>X</a>";
+            if($buscar == 0){
+                echo "      <h4><span>No se puede registrar salida <br> Usuario no registrado.</span></h4>";
+            }else{
+                $conectar->query("INSERT INTO $tablasalida VALUES ('', '$id_usuario', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)");
+                echo "      <h4><span>Se registró salida exitosamente.</span></h4>";
+            }
+            echo"   </div>
+                </div>";
+
         }
+        if(isset($_POST['consultar'])){
+            
+            $id_usuario = $_POST['identificador'];
+            
+            $buscar=0;
+
+            $imagen = "";
+            $documento = ""; 
+            $nombre = "";
+            $apellido = "";
+            $cargo =  "";
+            $tipoS =  "";
+            $hora = "";
+            
+            $datos = mysqli_query($conectar, "SELECT * FROM $tablaempleados WHERE documento = '$id_usuario'");
+            while($consulta = mysqli_fetch_array($datos)){
+                $buscar++;
+
+                $imagen = $consulta['Imagen'];
+                $documento = $consulta['documento']; 
+                $nombre= $consulta['nombreusuario'];
+                $apellido = $consulta['apellidos'];
+                $cargo =  $consulta['cargo'];
+                $tipoS =  $consulta['tiposangre'];
+                $hora = $consulta['horario'];
+                $fecha = $consulta['fechaingreso'];
+                $telefono = $consulta['telefono'];
+                $contactoemerg = $consulta['contacto'];
+                $empresa = $consulta['empresa'];
+            }
+
+            echo"<div class='fondo'>
+                        <div class='info_usuario'>
+                            <a href='scanner.php'>X</a>";
+            if($buscar == 0){
+                echo "<h4><span>El usuario no existe en la base de datos.</span></h4>";
+            }else{
+                echo"       <div class='imagen'>
+                                <img src='../imagenesigde/$imagen' alt='foto_perfil_usuario'>
+                            </div>
+                            <div class='datos'>
+                                <p><span>Identificación:</span> $documento</p>
+                                <p><span>Nombre:</span> $nombre $apellido</p>
+                                <p><span>Tipo de Sangre:</span> $tipoS</p>
+                                <p><span>Cargo:</span> $cargo</p>
+                                <p><span>Telefono:</span> $telefono</p>
+                                <p><span>Horario:</span> $hora</p>
+                                <p><span>Fecha de ingreso:</span> $fecha</p>
+                                <p><span>Empresa:</span> $empresa</p>
+                                <p><span>Contacto de emergencia:</span> $contactoemerg</p>
+                                
+                            </div>";
+            }
+            echo"   </div>
+                </div>";
+        }
+
+
 
 
 

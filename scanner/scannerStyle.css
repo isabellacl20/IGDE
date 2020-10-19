@@ -66,3 +66,59 @@ input[type="submit"]{
     display: block;
     margin-top: 10px;
 }
+/* Estilo para la informacion de empleado al cosultaro */
+
+.fondo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fondo .info_usuario{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: rgb(59, 59, 59);
+    position: relative;
+    padding: 1rem;
+}
+.fondo .info_usuario a{
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    width: 1rem;
+    height: 1rem;
+    padding: 2px;
+    border-radius: 3px;
+}
+.fondo .info_usuario .imagen{
+    width: 12rem;
+    overflow: hidden;
+}
+.fondo .info_usuario .imagen img{
+    width: 100%;
+}
+.fondo .info_usuario .datos{
+    width: 12rem;
+}
+.fondo .info_usuario .datos p{
+    text-align: left;
+    color: white;
+    font-weight: lighter;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+span{
+    font-weight: bolder;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 2px 3px 2px rgb(19, 18, 18);
+}

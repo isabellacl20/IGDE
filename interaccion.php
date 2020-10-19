@@ -21,7 +21,7 @@
 <body>
    
         
-<form action="interaccion.php" method="POST">
+<form action="interaccion.php" method="POST" enctype="multipart/form-data">
             <h1>REGISTRARSE</h1>
             <div class="datos">
                 <div id="labels">
@@ -35,7 +35,8 @@
                     <label for="horario">Horario de trabajo</label>
                     <label for="cargo">Cargo</label>
                     <label for="fechaingreso">Fecha de ingreso</label>
-                    <label for="contacto">Contacto de emergencia</label>                
+                    <label for="contacto">Contacto de emergencia</label>  
+                    <label for="foto"> Insertar foto</label>              
 
                 </div>
                 
@@ -51,6 +52,7 @@
                   <input type="text" name="cargo" id="cargo" required>
                   <input type="date" name="fechaingreso" id="fechaingreso" required>
                   <input type="number" name="contacto" id="contacto" required>
+                  <input type="file" name="foto_perfil" id="foto" required>
                 </div>
             </div>       
             
@@ -60,6 +62,31 @@
     <?php
       if(isset($_POST['Guardar'])){
          include('conectar.php');
+
+         // insertar imagen
+        if ((isset($_FILES['foto_perfil']['name']) && ($_FILES['foto_perfil']['error']== UPLOAD_ERR_OK))) { //Si la imagen cargó correctamente
+            
+            $ruta_almacenamiento = "imagenesigde/";
+            $ext = $_FILES['foto_perfil']['type'];
+            
+            $extension = "";
+            if ($ext =="image/jpeg") {
+                $extension = ".jpg";
+            }elseif ($ext =="image/png") {
+                $extension = ".png";
+            }elseif ($ext =="image/gif") {
+                $extension = ".gif";
+            }
+
+            $nuevoNombre = mktime();
+            
+            move_uploaded_file($_FILES['foto_perfil']['tmp_name'], $ruta_almacenamiento.$_FILES['foto_perfil']['name']); //guardela en esta dirección y con el nombre original de ella
+            rename($ruta_almacenamiento.$_FILES['foto_perfil']['name'], $ruta_almacenamiento.$nuevoNombre.$extension );
+            // echo"El archivo ".$_FILES['imagen_evento']['name']." se guardó exitosamente en la carpeta del servidor";
+        }else{
+            echo"El archivo no se pudo guardar";
+        }
+        // fin de insertar imagen
 
          $nombre = $_POST['nombreusuario'];
          $apellido = $_POST['apellidos'];
@@ -72,6 +99,7 @@
          $cargo = $_POST['cargo'];
          $fechaingreso = $_POST['fechaingreso'];
          $contacto = $_POST['contacto'];
+         $imagen = $nuevoNombre.$extension;
 
    
         //En la variable $datos se guarda la consulta de la tabla del estudainte 
@@ -83,7 +111,7 @@
           $buscar++;
        }
       if($buscar>0){echo"<h2>Ya existe este documento</h2>";}
-       else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto')");echo"Su usuario ha sido creado con éxito";
+       else{$conectar->query("INSERT INTO $tablaempleados VALUES ('$nombre', '$apellido', '$tipodesangre','$identificacion','$telefono','$correo','$empresa','$horario','$cargo','$fechaingreso','$contacto', '$imagen')");echo"Su usuario ha sido creado con éxito";
          // include("desconectar.php");
 
         ?>
